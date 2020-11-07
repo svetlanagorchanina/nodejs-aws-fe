@@ -32,7 +32,7 @@ plugins:
 
 custom:
   client:
-    bucketName: nodejs-aws-app
+    bucketName: nodejs-aws-app-${self:provider.stage}
     distributionFolder: build
   ## Serverless-single-page-app-plugin configuration:
   s3LocalPath: ${self:custom.client.distributionFolder}/

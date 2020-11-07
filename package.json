@@ -17,7 +17,8 @@
     "cloudfront:build:deploy": "npm run client:build:deploy && npm run cloudfront:invalidateCache",
     "cloudfront:build:deploy:nc": "npm run client:build:deploy:nc && npm run cloudfront:invalidateCache",
     "cloudfront:update:build:deploy": "npm run cloudfront:setup && npm run cloudfront:build:deploy",
-    "cloudfront:update:build:deploy:nc": "npm run cloudfront:setup && npm run cloudfront:build:deploy:nc"
+    "cloudfront:update:build:deploy:nc": "npm run cloudfront:setup && npm run cloudfront:build:deploy:nc",
+    "deploy": "npm run cloudfront:update:build:deploy:nc"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
