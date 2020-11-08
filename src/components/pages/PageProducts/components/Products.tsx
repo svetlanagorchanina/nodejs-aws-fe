@@ -12,6 +12,8 @@ import AddProductToCart from "components/AddProductToCart/AddProductToCart";
 import axios from "axios";
 import API_PATHS from "constants/apiPaths";
 
+const DEFAULT_SRC =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIn1V6Yym9t0ROCbQtkpZ-Z0aiTTq-fLqbew&usqp=CAU";
 const useStyles = makeStyles((theme) => ({
   card: {
     height: "100%",
@@ -45,7 +47,7 @@ export default function Products() {
           <Card className={classes.card}>
             <CardMedia
               className={classes.cardMedia}
-              image={product.src}
+              image={product.src || DEFAULT_SRC}
               title={product.title}
             />
             <CardContent className={classes.cardContent}>
